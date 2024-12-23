@@ -30,10 +30,6 @@ window.addEventListener('load', function() {
             element.classList.remove('hidden');
             element.classList.add('visible');
 
-            // const script = document.createElement('script');
-            // script.src = 'tree/tree.js';
-            // document.head.appendChild(script);
-
             snowflakes.forEach(snowflake => {
                 snowflake.style.opacity = '1';
                 snowflake.style.transition = 'opacity 3s ease-in-out';
