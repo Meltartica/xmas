@@ -47,7 +47,7 @@ function countdown(targetDate) {
         updateElement("minutes", 0, "block");
         updateElement("seconds", 0, "block");
         document.querySelector('h1').textContent = "Merry Christmas !!!";
-        return;
+        return true;
     }
 
     const days = Math.floor(remainingSeconds / (60 * 60 * 24));
@@ -70,6 +70,8 @@ function countdown(targetDate) {
     previousValues.hours = hours;
     previousValues.minutes = minutes;
     previousValues.seconds = seconds;
+
+    return false;
 }
 
 function updateElement(id, value, animationClass, blockClass) {

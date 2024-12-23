@@ -36,26 +36,14 @@ function onLoad() {
     }
 } 
 
-function countdown(targetDate) {
-    const now = new Date();
-    let remainingSeconds = Math.floor((targetDate - now) / 1000);
+function countdownA(targetDate) {
+    const nowA = new Date();
+    let remainingSecondsA = Math.floor((targetDate - nowA) / 1000);
 
-    if (remainingSeconds <= 0) {
+    if (remainingSecondsA <= 0) {
         return true;
     }
 
-    const days = Math.floor(remainingSeconds / (60 * 60 * 24));
-    remainingSeconds %= (60 * 60 * 24);
-
-    const hours = Math.floor(remainingSeconds / (60 * 60));
-    remainingSeconds %= (60 * 60);
-
-    const minutes = Math.floor(remainingSeconds / 60);
-    remainingSeconds %= 60;
-
-    const seconds = remainingSeconds;
-
-    console.log(`Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`);
     return false;
 }
 
