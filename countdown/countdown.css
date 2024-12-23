@@ -1,0 +1,49 @@
+/* Countdown CSS */
+
+#countdown {
+    display: flex;
+    gap: 12px;
+}
+
+.digit1, .digit2 {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 64px;
+    position: relative;
+    transform-origin: top;
+    margin-inline: 4px;
+}
+
+.digit1.block::before, .digit2.block::before {
+    content: attr(data-previous-digit);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    top: 0;
+    border-radius: 5px;
+    transform-origin: bottom;
+}
+
+.digit1.animate::before, .digit2.animate::before {
+    animation: fold-top 1s infinite;
+}
+
+@keyframes fold-top {
+    0% { transform: rotateX(0); }
+    100% { transform: rotateX(-180deg); }
+}
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}

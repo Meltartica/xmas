@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    perspective: 1000px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    bottom: 1rem;
+}
+
+.snowflake-loading {
+    color: white;
+    font-size: 12rem;
+    display: inline-block;
+    animation: spin 4s linear infinite;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transform-origin: center 55%;
+    transition: all 1s ease-in-out;
+}
+
+.snowflake-decor {
+    color: white;
+    font-size: 128px;
+    display: inline-block;
+    animation: spin 4s linear infinite;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transform-origin: center 55%;
+    transition: all 3s ease-in-out;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+}
+
+canvas{
+    background:#000;
+    opacity: 1;
+  }
