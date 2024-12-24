@@ -15,8 +15,8 @@ var canvas, ctx, w, h, particles = [], probability = 0.04,
     xPoint, yPoint;
 
 function onLoad() {
-    var targetDate = new Date(2024, 11, 25);
-    if (countdown(targetDate)) {
+    var targetDateA = new Date(2024, 11, 25);
+    if (countdownA(targetDateA)) {
         var container = document.createElement('div');
         container.style.position = 'absolute';
         container.style.top = '0';
@@ -36,14 +36,13 @@ function onLoad() {
     }
 } 
 
-function countdownA(targetDate) {
-    const nowA = new Date();
-    let remainingSecondsA = Math.floor((targetDate - nowA) / 1000);
+function countdownA(targetDateA) {
+    const now = new Date();
+    let remainingSecondsA = Math.floor((targetDateA - now) / 1000);
 
     if (remainingSecondsA <= 0) {
         return true;
     }
-
     return false;
 }
 

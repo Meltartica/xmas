@@ -9,7 +9,6 @@ body {
     width: 100vw;
     height: 100vh;
     perspective: 1000px;
-    margin: 0;
 }
 
 h1 {
@@ -19,10 +18,9 @@ h1 {
 }
 
 nav {
-    display: flex;
-    gap: 1rem;
-    position: absolute;
     bottom: 1rem;
+    transition: all 3s ease-in-out;
+    animation: slide-in 5s ease-in-out forwards;
 }
 
 .snowflake-loading {
@@ -52,6 +50,15 @@ nav {
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
     }
 }
 
