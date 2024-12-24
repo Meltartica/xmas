@@ -1,3 +1,6 @@
+## Note
+- Best Viewed on Desktop (No Optimizations Done for Mobile Devices)
+
 ## Credits
 
 - Snow
