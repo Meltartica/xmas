@@ -32,7 +32,6 @@ nav {
     animation: spin 4s linear infinite;
     position: absolute;
     transform: translate(-50%, -50%);
-    transform-origin: center 55%;
     transition: all 1s ease-in-out;
 }
 

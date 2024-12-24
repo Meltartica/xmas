@@ -3,9 +3,9 @@ window.addEventListener('load', function() {
     document.documentElement.style.overflow = 'hidden';
 
     setTimeout(function() {
-        const snowflakeLoading = document.createElement('span');
+        const snowflakeLoading = document.createElement('img');
         snowflakeLoading.classList.add('snowflake-loading');
-        snowflakeLoading.innerHTML = '&#10052;';
+        snowflakeLoading.src = 'assets/snowflake.svg';
         snowflakeLoading.style.position = 'absolute';
         document.body.appendChild(snowflakeLoading);
     }, 0);
@@ -14,6 +14,7 @@ window.addEventListener('load', function() {
         document.querySelector('.snowflake-loading').style.opacity = '0';
     }, 2000);
 
+    /*
     const snowflakes = [];
     for (let i = 0; i < 4; i++) {
         const snowflake = document.createElement('span');
@@ -24,6 +25,8 @@ window.addEventListener('load', function() {
         document.body.appendChild(snowflake);
         snowflakes.push(snowflake);
     }
+
+    */
 
     setTimeout(function() {
         document.querySelectorAll('.hidden').forEach(function(element) {
